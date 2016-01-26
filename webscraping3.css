@@ -1,0 +1,59 @@
+
+
+
+element.style {
+}
+latestmedia="all"
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+user agent stylesheetdiv {
+    display: block;
+}
+Inherited from body
+latestmedia="all"
+body {
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: .1px;
+    color: #323232;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+latestmedia="all"
+body {
+    font-family: "Open Sans", Arial, Helvetica, Verdana, Tahoma, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #636363;
+    background-color: white;
+}
+Inherited from html
+latestmedia="all"
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+latestmedia="all"
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+Pseudo ::before element
+latestmedia="all"
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+Pseudo ::after element
+latestmedia="all"
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
