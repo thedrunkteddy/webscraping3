@@ -30,6 +30,11 @@ if (Meteor.isClient) {
       return !Session.get("scraper");
     }
   })
+
+  Meteor.Spinner.options={
+    className:'spinner',
+    top: 'auto',
+  }
     }
 
 

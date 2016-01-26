@@ -1,6 +1,6 @@
 <head>
-<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4f87f71b56","applicationID":"2069853,9293494","transactionName":"dglaEhAKD1RUEBxWXFoNR0kOBBddQhY=","queueTime":1,"applicationTime":102,"agent":"js-agent.newrelic.com/nr-768.min.js"}</script>
-<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcOVV5bGwEAUlhaAgI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(t){function e(e,n,a){t&&t(e,n,a),a||(a={});for(var c=s(e),f=c.length,u=i(a,o,r),d=0;f>d;d++)c[d].apply(u,n);return u}function a(t,e){f[t]=s(t).concat(e)}function s(t){return f[t]||[]}function c(){return n(e)}var f={};return{on:a,emit:e,create:c,listeners:s,_events:f}}function r(){return{}}var o="nr@context",i=t("gos");e.exports=n()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:24,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,s){try{c?c-=1:r("err",[s||new UncaughtException(t,e,n)])}catch(f){try{r("ierr",[f,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof a?a.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=window.onerror,s=!1,c=0;t("loader").features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(f){"stack"in f&&(t(1),t(2),"addEventListener"in window&&t(3),window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)&&t(4),s=!0)}i.on("fn-start",function(){s&&(c+=1)}),i.on("fn-err",function(t,e,r){s&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){s&&!this.thrown&&c>0&&(c-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:25,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1),window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){i.inPlace(t,["addEventListener","removeEventListener"],"-",r)}function r(t){return t[1]}var o=t("ee").create(),i=t(1)(o),a=t("gos");if(e.exports=o,n(window),"getPrototypeOf"in Object){for(var s=document;s&&!s.hasOwnProperty("addEventListener");)s=Object.getPrototypeOf(s);s&&n(s);for(var c=XMLHttpRequest.prototype;c&&!c.hasOwnProperty("addEventListener");)c=Object.getPrototypeOf(c);c&&n(c)}else XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&n(XMLHttpRequest.prototype);o.on("addEventListener-start",function(t,e){function n(){return s}if(t[1]){var r=t[1];if("function"==typeof r){var s=a(r,"nr@wrapped",function(){return i(r,"fn-",n,r.name||"anonymous")});this.wrapped=t[1]=s,o.emit("initEventContext",[t,e],this.wrapped)}else"function"==typeof r.handleEvent&&i.inPlace(r,["handleEvent"],"fn-")}}),o.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:26,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:26,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:26,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){function r(){return a}this.ctx={};var a={"nr@context":this.ctx};o.emit("initTimerContext",[t,n],a),t[0]=i(t[0],"fn-",r,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:26,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,p,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-")}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,p=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:26,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var i=0;c>i;i++)t.removeEventListener(s[i],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var a=t.responseType,f="arraybuffer"===a||"blob"===a||"json"===a?t.response:t.responseText,u=n(f);if(u&&(r.rxSize=u),this.sameOrigin){var d=t.getResponseHeader("X-NewRelic-App-Data");d&&(e.cat=d.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,o("xhr",[e,r,this.startTime])}}}function n(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function r(t,e){var n=i(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}if(window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent)){t("loader").features.xhr=!0;var o=t("handle"),i=t(2),a=t("ee"),s=["load","error","abort","timeout"],c=s.length,f=t(1),u=window.XMLHttpRequest;t(4),t(3),a.on("new-xhr",function(){this.totalCbs=0,this.called=0,this.cbTime=0,this.end=e,this.ended=!1,this.xhrGuids={}}),a.on("open-xhr-start",function(t){this.params={method:t[0]},r(this,t[1]),this.metrics={}}),a.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),a.on("send-xhr-start",function(t,e){var r=this.metrics,o=t[0],i=this;if(r&&o){var f=n(o);f&&(r.txSize=f)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{a.emit("internal-error",[n])}catch(r){}}};for(var u=0;c>u;u++)e.addEventListener(s[u],this.listener,!1)}),a.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),a.on("xhr-load-added",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),a.on("xhr-load-removed",function(t,e){var n=""+f(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),a.on("addEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-added",[t[1],t[2]],e)}),a.on("removeEventListener-end",function(t,e){e instanceof u&&"load"===t[0]&&a.emit("xhr-load-removed",[t[1],t[2]],e)}),a.on("fn-start",function(t,e,n){e instanceof u&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),a.on("fn-end",function(t,e){this.xhrCbStart&&a.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:12,4:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");return!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname),r.sameOrigin=!e.hostname||e.hostname===document.domain&&e.port===n.port&&e.protocol===n.protocol,r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:24,2:25,handle:"D5DuLP"}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){e in t||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-768.min.js"},p=e.exports={offset:i(),origin:u,features:{}};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()])},{1:24,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],24:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],25:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],26:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,f;try{i=this,n=o(arguments),s=r&&r(n,i)||{}}catch(d){u([d,"",[n,i,a],s])}c(e+"start",[n,i,a],s);try{return f=t.apply(i,n)}catch(p){throw c(e+"err",[n,i,p],s),p}finally{c(e+"end",[n,i,f],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,f(t,nrWrapper),nrWrapper)}function s(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function c(e,n,r){try{t.emit(e,n,r)}catch(o){u([o,e,n,r])}}function f(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){u([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function u(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=s,e.flag=i,e}},{1:25,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"4f87f71b56","applicationID":"2069853,9293494","transactionName":"dglaEhAKD1RUEBxWXFoNR0kOBBddQhY=","queueTime":1,"applicationTime":169,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VwcOVV5bGwEAUlhaAgI="};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({QJf3ax:[function(t,e){function n(){}function r(t){function e(t){return t&&t instanceof n?t:t?a(t,i,o):o()}function s(n,r,o){t&&t(n,r,o);for(var i=e(o),a=f(n),s=a.length,c=0;s>c;c++)a[c].apply(i,r);return i}function c(t,e){d[t]=f(t).concat(e)}function f(t){return d[t]||[]}function u(){return r(s)}var d={};return{on:c,emit:s,create:u,listeners:f,context:e,_events:d}}function o(){return new n}var i="nr@context",a=t("gos");e.exports=r()},{gos:"7eSDFh"}],ee:[function(t,e){e.exports=t("QJf3ax")},{}],3:[function(t){function e(t){try{i.console&&console.log(t)}catch(e){}}var n,r=t("ee"),o=t(1),i={};try{n=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(i.console=!0,-1!==n.indexOf("dev")&&(i.dev=!0),-1!==n.indexOf("nr_dev")&&(i.nrDev=!0))}catch(a){}i.nrDev&&r.on("internal-error",function(t){e(t.stack)}),i.dev&&r.on("fn-err",function(t,n,r){e(r.stack)}),i.dev&&(e("NR AGENT IN DEVELOPMENT MODE"),e("flags: "+o(i,function(t){return t}).join(", ")))},{1:25,ee:"QJf3ax"}],4:[function(t){function e(t,e,n,i,a){try{f?f-=1:r("err",[a||new UncaughtException(t,e,n)])}catch(c){try{r("ierr",[c,(new Date).getTime(),!0])}catch(u){}}return"function"==typeof s?s.apply(this,o(arguments)):!1}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function n(t){r("err",[t,(new Date).getTime()])}var r=t("handle"),o=t(6),i=t("ee"),a=t("loader"),s=window.onerror,c=!1,f=0;a.features.err=!0,t(5),window.onerror=e;try{throw new Error}catch(u){"stack"in u&&(t(1),t(2),"addEventListener"in window&&t(3),a.xhrWrappable&&t(4),c=!0)}i.on("fn-start",function(){c&&(f+=1)}),i.on("fn-err",function(t,e,r){c&&(this.thrown=!0,n(r))}),i.on("fn-end",function(){c&&!this.thrown&&f>0&&(f-=1)}),i.on("internal-error",function(t){r("ierr",[t,(new Date).getTime(),!0])})},{1:11,2:10,3:8,4:12,5:3,6:26,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],5:[function(t){if(window.addEventListener){var e=t("handle"),n=t("ee");t(1),window.addEventListener("click",function(){e("inc",["ck"])},!1),window.addEventListener("hashchange",function(){e("inc",["hc"])},!1),n.on("pushState-start",function(){e("inc",["ps"])})}},{1:9,ee:"QJf3ax",handle:"D5DuLP"}],6:[function(t){t("loader").features.ins=!0},{loader:"G9z0Bl"}],7:[function(t){function e(){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var n=t("ee"),r=t("handle"),o=t(1),i=t(2);t("loader").features.stn=!0,t(3);var a=Event;n.on("fn-start",function(t){var e=t[0];e instanceof a&&(this.bstStart=Date.now())}),n.on("fn-end",function(t,e){var n=t[0];n instanceof a&&r("bst",[n,e,this.bstStart,Date.now()])}),o.on("fn-start",function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),o.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),this.bstType])}),i.on("fn-start",function(){this.bstStart=Date.now()}),i.on("fn-end",function(t,e){r("bstTimer",[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),n.on("pushState-start",function(){this.time=Date.now(),this.startPath=location.pathname+location.hash}),n.on("pushState-end",function(){r("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),"addEventListener"in window.performance&&(window.performance.clearResourceTimings?window.performance.addEventListener("resourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.clearResourceTimings()},!1):window.performance.addEventListener("webkitresourcetimingbufferfull",function(){r("bstResource",[window.performance.getEntriesByType("resource")]),window.performance.webkitClearResourceTimings()},!1)),document.addEventListener("scroll",e,!1),document.addEventListener("keypress",e,!1),document.addEventListener("click",e,!1)}},{1:11,2:10,3:9,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],8:[function(t,e){function n(t){for(var e=t;e&&!e.hasOwnProperty("addEventListener");)e=Object.getPrototypeOf(e);e&&r(e)}function r(t){a.inPlace(t,["addEventListener","removeEventListener"],"-",o)}function o(t){return t[1]}var i=t("ee").create(),a=t(1)(i),s=t("gos");e.exports=i,r(window),"getPrototypeOf"in Object?(n(document),n(XMLHttpRequest.prototype)):XMLHttpRequest.prototype.hasOwnProperty("addEventListener")&&r(XMLHttpRequest.prototype),i.on("addEventListener-start",function(t){if(t[1]){var e=t[1];if("function"==typeof e){var n=s(e,"nr@wrapped",function(){return a(e,"fn-",null,e.name||"anonymous")});this.wrapped=t[1]=n}else"function"==typeof e.handleEvent&&a.inPlace(e,["handleEvent"],"fn-")}}),i.on("removeEventListener-start",function(t){var e=this.wrapped;e&&(t[1]=e)})},{1:27,ee:"QJf3ax",gos:"7eSDFh"}],9:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window.history,["pushState","replaceState"],"-")},{1:27,ee:"QJf3ax"}],10:[function(t,e){var n=t("ee").create(),r=t(1)(n);e.exports=n,r.inPlace(window,["requestAnimationFrame","mozRequestAnimationFrame","webkitRequestAnimationFrame","msRequestAnimationFrame"],"raf-"),n.on("raf-start",function(t){t[0]=r(t[0],"fn-")})},{1:27,ee:"QJf3ax"}],11:[function(t,e){function n(t,e,n){t[0]=i(t[0],"fn-",null,n)}function r(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=i(t[0],"fn-",this,n)}var o=t("ee").create(),i=t(1)(o);e.exports=o,i.inPlace(window,["setTimeout","setImmediate"],"setTimer-"),i.inPlace(window,["setInterval"],"setInterval-"),i.inPlace(window,["clearTimeout","clearImmediate"],"clearTimeout-"),o.on("setInterval-start",n),o.on("setTimer-start",r)},{1:27,ee:"QJf3ax"}],12:[function(t,e){function n(){f.inPlace(this,l,"fn-",o)}function r(t,e){f.inPlace(e,["onreadystatechange"],"fn-",o)}function o(t,e){return e}function i(t,e){for(var n in t)e[n]=t[n];return e}var a=t("ee").create(),s=t(1),c=t(2),f=c(a),u=c(s),d=window.XMLHttpRequest,l=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"];e.exports=a,window.XMLHttpRequest=function(t){var e=new d(t);try{a.emit("new-xhr",[e],e),e.hasOwnProperty("addEventListener")&&u.inPlace(e,["addEventListener","removeEventListener"],"-",o),e.addEventListener("readystatechange",n,!1)}catch(r){try{a.emit("internal-error",[r])}catch(i){}}return e},i(d,XMLHttpRequest),XMLHttpRequest.prototype=d.prototype,f.inPlace(XMLHttpRequest.prototype,["open","send"],"-xhr-",o),a.on("send-xhr-start",r),a.on("open-xhr-start",r)},{1:8,2:27,ee:"QJf3ax"}],13:[function(t){function e(t){var e=this.params,r=this.metrics;if(!this.ended){this.ended=!0;for(var o=0;u>o;o++)t.removeEventListener(f[o],this.listener,!1);if(!e.aborted){if(r.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=this.lastSize||n(t);if(i&&(r.rxSize=i),this.sameOrigin){var s=t.getResponseHeader("X-NewRelic-App-Data");s&&(e.cat=s.split(", ").pop())}}else e.status=0;r.cbTime=this.cbTime,c.emit("xhr-done",[t],t),a("xhr",[e,r,this.startTime])}}}function n(t){var e=t.responseType,n="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return r(n)}function r(t){if("string"==typeof t&&t.length)return t.length;if("object"!=typeof t)return void 0;if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if("undefined"!=typeof FormData&&t instanceof FormData)return void 0;try{return JSON.stringify(t).length}catch(e){return void 0}}function o(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var i=t("loader");if(i.xhrWrappable){var a=t("handle"),s=t(2),c=t("ee"),f=["load","error","abort","timeout"],u=f.length,d=t(1),l=t(3),p=window.XMLHttpRequest;i.features.xhr=!0,t(5),t(4),c.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=e,n.ended=!1,n.xhrGuids={},n.lastSize=0,l&&(l>34||10>l)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),c.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),c.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),c.on("send-xhr-start",function(t,e){var n=this.metrics,o=t[0],i=this;if(n&&o){var a=r(o);a&&(n.txSize=a)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{c.emit("internal-error",[n])}catch(r){}}};for(var s=0;u>s;s++)e.addEventListener(f[s],this.listener,!1)}),c.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),c.on("xhr-load-added",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),c.on("xhr-load-removed",function(t,e){var n=""+d(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),c.on("addEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-added",[t[1],t[2]],e)}),c.on("removeEventListener-end",function(t,e){e instanceof p&&"load"===t[0]&&c.emit("xhr-load-removed",[t[1],t[2]],e)}),c.on("fn-start",function(t,e,n){e instanceof p&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),c.on("fn-end",function(t,e){this.xhrCbStart&&c.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{1:"XL7HBI",2:14,3:16,4:12,5:8,ee:"QJf3ax",handle:"D5DuLP",loader:"G9z0Bl"}],14:[function(t,e){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],15:[function(t,e){function n(t){return function(){r(t,[(new Date).getTime()].concat(i(arguments)))}}var r=t("handle"),o=t(1),i=t(2);"undefined"==typeof window.newrelic&&(newrelic=window.NREUM);var a=["setPageViewName","addPageAction","setCustomAttribute","finished","addToTrace","inlineHit","noticeError"];o(a,function(t,e){window.NREUM[e]=n("api-"+e)}),e.exports=window.NREUM},{1:25,2:26,handle:"D5DuLP"}],16:[function(t,e){var n=0,r=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);r&&(n=+r[1]),e.exports=n},{}],gos:[function(t,e){e.exports=t("7eSDFh")},{}],"7eSDFh":[function(t,e){function n(t,e,n){if(r.call(t,e))return t[e];var o=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:o,writable:!0,enumerable:!1}),o}catch(i){}return t[e]=o,o}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],D5DuLP:[function(t,e){function n(t,e,n){return r.listeners(t).length?r.emit(t,e,n):void(r.q&&(r.q[t]||(r.q[t]=[]),r.q[t].push(e)))}var r=t("ee").create();e.exports=n,n.ee=r,r.q={}},{ee:"QJf3ax"}],handle:[function(t,e){e.exports=t("D5DuLP")},{}],XL7HBI:[function(t,e){function n(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:i(t,o,function(){return r++})}var r=1,o="nr@id",i=t("gos");e.exports=n},{gos:"7eSDFh"}],id:[function(t,e){e.exports=t("XL7HBI")},{}],G9z0Bl:[function(t,e){function n(){if(!h++){var t=p.info=NREUM.info,e=f.getElementsByTagName("script")[0];if(t&&t.licenseKey&&t.applicationID&&e){s(d,function(e,n){t[e]||(t[e]=n)});var n="https"===u.split(":")[0]||t.sslForHttp;p.proto=n?"https://":"http://",a("mark",["onload",i()]);var r=f.createElement("script");r.src=p.proto+t.agent,e.parentNode.insertBefore(r,e)}}}function r(){"complete"===f.readyState&&o()}function o(){a("mark",["domContent",i()])}function i(){return(new Date).getTime()}var a=t("handle"),s=t(1),c=window,f=c.document;t(2);var u=(""+location).split("?")[0],d={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-852.min.js"},l=window.XMLHttpRequest&&XMLHttpRequest.prototype&&XMLHttpRequest.prototype.addEventListener&&!/CriOS/.test(navigator.userAgent),p=e.exports={offset:i(),origin:u,features:{},xhrWrappable:l};f.addEventListener?(f.addEventListener("DOMContentLoaded",o,!1),c.addEventListener("load",n,!1)):(f.attachEvent("onreadystatechange",r),c.attachEvent("onload",n)),a("mark",["firstbyte",i()]);var h=0},{1:25,2:15,handle:"D5DuLP"}],loader:[function(t,e){e.exports=t("G9z0Bl")},{}],25:[function(t,e){function n(t,e){var n=[],o="",i=0;for(o in t)r.call(t,o)&&(n[i]=e(o,t[o]),i+=1);return n}var r=Object.prototype.hasOwnProperty;e.exports=n},{}],26:[function(t,e){function n(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(0>o?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=n},{}],27:[function(t,e){function n(t){return!(t&&"function"==typeof t&&t.apply&&!t[i])}var r=t("ee"),o=t(1),i="nr@original",a=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t){function e(t,e,r,a){function nrWrapper(){var n,i,s,c;try{i=this,n=o(arguments),s="function"==typeof r?r(n,i):r||{}}catch(u){d([u,"",[n,i,a],s])}f(e+"start",[n,i,a],s);try{return c=t.apply(i,n)}catch(l){throw f(e+"err",[n,i,l],s),l}finally{f(e+"end",[n,i,c],s)}}return n(t)?t:(e||(e=""),nrWrapper[i]=t,u(t,nrWrapper),nrWrapper)}function c(t,r,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<r.length;c++)s=r[c],a=t[s],n(a)||(t[s]=e(a,f?s+o:o,i,s))}function f(e,n,r){if(!s){s=!0;try{t.emit(e,n,r)}catch(o){d([o,e,n,r])}s=!1}}function u(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){d([r])}for(var o in t)a.call(t,o)&&(e[o]=t[o]);return e}function d(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=r),e.inPlace=c,e.flag=i,e}},{1:26,ee:"QJf3ax"}]},{},["G9z0Bl",4,13,7,6,5]);</script>
 
 <title>Latest Deals - BookBub</title>
 <link rel="stylesheet" media="all" href="//d2616tuem1neks.cloudfront.net/assets/pages/browse-7ded211d170110248a2d2c088c3a65ef.css" />
@@ -12,7 +12,7 @@
 <script src="https://www.bookbub.com/assets/respond.proxy-e21a2e89910058c3cd834521cf5b93ca.js"></script>
 <![endif]-->
 <meta name="csrf-param" content="authenticity_token" />
-<meta name="csrf-token" content="JKTIHlXP/jaCDbwQg7BvSnWb7HdSVqn9pn9/PTOHAufrb7U6WKYyTbxcqLkC5Bb7L7O5hgywqBQ/o37Di2vYjA==" />
+<meta name="csrf-token" content="9CppmFIHzp6FIUb09NStd5WSbEGCOX747PB2FQewStV/N01shLmgC/wHMUSa20ZVOoQ5lWcS7OZLKweayhLZgg==" />
 <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
 <meta content='Get free and bargain bestsellers for Kindle, Nook, and more. Sign up for free today, and start reading instantly!' name='description'>
 <meta content='311548868887910' property='fb:app_id'>
@@ -22,21 +22,21 @@
 <meta content='' property='og:url'>
 <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1440018831/the-whiskey-rebels-by-david-liss.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452444469/stiff-penalty-by-annelise-ryan.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1419876605/russian-roulette-by-mike-faricy.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452542997/the-trigger-by-l-j-sellers.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452013027/the-body-market-by-d-v-berkom.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1450989866/grub-line-rider-by-louis-l-amour.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1397080599/getting-lucky-by-katie-graykowski.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1453475289/the-heat-of-the-moment-by-katie-rose.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452016531/jax-by-kelly-gendron.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452969080/knight-in-highland-armor-by-amy-jarecki.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1451398742/emma-s-journey-by-callie-hutton.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1431735385/beyond-the-misty-shore-by-vicki-hinze.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1453487509/honor-reclaimed-by-tonya-burrows.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1417631207/something-great-by-m-clarke.jpg' property='og:image'>
-<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1453299605/resisting-her-by-kendall-ryan-2016-01-20.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1453766241/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1440019221/dead-between-the-lines-by-denise-swanson.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1410270795/the-bone-orchard-by-daniel-judson.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1376506526/murder-on-the-mind-by-l-l-bartlett.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1434817820/skeleton-run-by-john-l-deboer.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1376505043/the-oracle-code-by-charles-brokaw.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1443034981/love-garage-by-liz-crowe.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452479037/don-t-break-my-heart-by-laurie-kellogg.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1426018016/a-town-called-valentine-by-emma-cane.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1447448025/all-fired-up-by-vivian-arend-and-elle-kennedy.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1451574267/capture-me-by-anna-zaires.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452970902/black-falcon-s-lady-by-kimberly-cates.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1430220696/once-a-duchess-by-elizabeth-boyce.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1435715055/nightwalker-by-jacquelyn-frank.jpg' property='og:image'>
+<meta content='http://res.cloudinary.com/bookbub/image/upload/c_limit,h_1500,q_100,w_1500/v1452543168/within-temptation-by-tanya-holmes.jpg' property='og:image'>
 <link href='/favicon.ico?v=2' rel='shortcut icon'>
 <link rel="icon" type="image/x-icon" href="//d2616tuem1neks.cloudfront.net/assets/modules/touch_icons/BB_196x196-c43b1fe62e40736092927cb49b8a31c4.png" sizes="196x196" />
 <link rel="apple-touch-icon" type="image/x-icon" href="//d2616tuem1neks.cloudfront.net/assets/modules/touch_icons/BB_60x60-6fcd223aeea2a33e45401ef3df88d4fb.png" />
@@ -110,7 +110,7 @@
 <style>
   @media(max-width: 767px) {
     .deals-panel {
-      min-height: 2200px; } }
+      min-height: 2250px; } }
 </style>
 <div class='page-wrapper'>
 <div class='header-nav'>
@@ -181,7 +181,7 @@
 
 <div class='join-prompt' id='join-inline'>
 <div class='container'>
-<form id="join-form" class="subscribe-form text-center no-errors mobile-inline form-borderless form-inline" role="form" action="/user_signups" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="hb5SMmXBlMSzWTcm0csL+a/ohJe3LlXYx72zac0SgppKdS8WaKhYv40II49Qn3JI9cDRZunIVDFeYbKXdf5Y8Q==" /><span class='prompt hidden-xs'>Enter Your Email to Get Free Books:</span>
+<form id="join-form" class="subscribe-form text-center no-errors mobile-inline form-borderless form-inline" role="form" action="/user_signups" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="T9qELz3SOAm+vkfcrB6+0ljUu4Lwu83IRT3TMSGyUz3Ex6Db62xWnMeYMGzCEVXw98LuVhWQX9bi5qK+7BDAag==" /><span class='prompt hidden-xs'>Enter Your Email to Get Free Books:</span>
 <input type="hidden" name="send_home" id="send_home" value="true" />
 <input type="hidden" name="from" id="from" value="browse" />
 <div class="form-group"><label class="sr-only control-label" for="user_email_address">Email address</label><input placeholder="Your Email" class="form-control user-email-field" type="email" name="user[email_address]" id="user_email_address" /></div>
@@ -296,6 +296,9 @@
 </li>
 <li class='' id='category-nav-link-22'>
 <a href="/ebook-deals/romantic-suspense-ebooks">Romantic Suspense</a>
+</li>
+<li class='' id='category-nav-link-43'>
+<a href="/ebook-deals/Science-ebooks">Science</a>
 </li>
 <li class='' id='category-nav-link-7'>
 <a href="/ebook-deals/science-fiction-ebooks">Science Fiction</a>
@@ -438,6 +441,9 @@ Religious &amp; Inspirational
 <option value='/ebook-deals/romantic-suspense-ebooks'>
 Romantic Suspense
 </option>
+<option value='/ebook-deals/Science-ebooks'>
+Science
+</option>
 <option value='/ebook-deals/science-fiction-ebooks'>
 Science Fiction
 </option>
@@ -459,81 +465,81 @@ Women's Fiction
 <option value='/ebook-deals/free-ebooks'>Free Ebooks</option>
 </select>
 </form>
+<h1 class='standard hidden-xs'>
+Latest Deals
+</h1>
 <div class='promotions' id='latest-deals'>
   <div style= "margin-right: 99%">
 
-    {{> scraper}}
+      {{> scraper}}
 
-  </div>
-<div class='book-panel book row' data-category='Historical Fiction,Bestsellers' data-per-region-price='199' data-price='199' data-primary-category='bestsellers' data-region='us' data-slug='the-whiskey-rebels-by-david-liss' id='promotion-31148'>
+    </div>
+
+<div class='book-panel book row' data-category='Historical Fiction,Historical Mysteries,Bestsellers' data-per-region-price='199' data-price='199' data-primary-category='bestsellers' data-region='us' data-slug='princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25' id='promotion-31366'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/the-whiskey-rebels-by-david-liss"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1440018831/the-whiskey-rebels-by-david-liss.jpg" alt="The whiskey rebels by david liss" /></a>
+<a href="/books/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453766241/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25.jpg" alt="Princess elizabeth s spy by susan elia macneal 2016 01 25" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/the-whiskey-rebels-by-david-liss"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1440018831/the-whiskey-rebels-by-david-liss.jpg" alt="The whiskey rebels by david liss" /></a>
+<a href="/books/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453766241/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25.jpg" alt="Princess elizabeth s spy by susan elia macneal 2016 01 25" /></a>
 </div>
-
-
 <h5 class='standard book-title'>
-<a href="/books/the-whiskey-rebels-by-david-liss">The Whiskey Rebels</a>
+<a href="/books/princess-elizabeth-s-spy-by-susan-elia-macneal-2016-01-25">Princess Elizabeth’s Spy</a>
 <small class='book-author'>
 by
-
-<a href="/authors/david-liss">David Liss</a>
+<a href="/authors/susan-elia-macneal">Susan Elia MacNeal</a>
 </small>
 </h5>
-<p class='blurb'>From a <i>New York Times</i> bestselling author comes “a raucous mix of historical fiction and action-adventure thriller” (<i>Booklist</i>). In 18th-century America, former patriot spy Ethan Saunders is accused of treason — and his quest for redemption pushes him headfirst into a world of moonshine, political feuding, and conspiracy.</p>
+<p class='blurb'>Just as Europe is entering World War II, Maggie Hope accepts an undercover assignment at Windsor Castle. Posing as Princess Elizabeth’s tutor seems simple enough — but a shocking murder soon throws the entire royal family into chaos… An enthralling <i>New York Times</i> bestseller!</p>
 <p class='prices'>
 <span class='orig-price'>$11.99</span>
 <span class='disc-price'>$1.99</span>
-<span class= 'disc-price'> </span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31148?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31148?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31148?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31148?retailer_id=4">Google</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31148?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31366?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31366?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31366?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31366?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31366?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Categories:</strong>
-<a href="/ebook-deals/bestsellers-ebooks">Bestsellers</a>, <a href="/ebook-deals/historical-fiction-ebooks">Historical Fiction</a>
+<a href="/ebook-deals/bestsellers-ebooks">Bestsellers</a>, <a href="/ebook-deals/historical-mysteries-ebooks">Historical Mysteries</a>, <a href="/ebook-deals/historical-fiction-ebooks">Historical Fiction</a>
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Cozy Mysteries' data-per-region-price='199' data-price='199' data-primary-category='cozy-mysteries' data-region='us' data-slug='stiff-penalty-by-annelise-ryan' id='promotion-30767'>
+<div class='book-panel book row' data-category='Cozy Mysteries' data-per-region-price='199' data-price='199' data-primary-category='cozy-mysteries' data-region='us' data-slug='dead-between-the-lines-by-denise-swanson' id='promotion-31532'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/stiff-penalty-by-annelise-ryan"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452444469/stiff-penalty-by-annelise-ryan.jpg" alt="Stiff penalty by annelise ryan" /></a>
+<a href="/books/dead-between-the-lines-by-denise-swanson"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1440019221/dead-between-the-lines-by-denise-swanson.jpg" alt="Dead between the lines by denise swanson" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/stiff-penalty-by-annelise-ryan"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452444469/stiff-penalty-by-annelise-ryan.jpg" alt="Stiff penalty by annelise ryan" /></a>
+<a href="/books/dead-between-the-lines-by-denise-swanson"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1440019221/dead-between-the-lines-by-denise-swanson.jpg" alt="Dead between the lines by denise swanson" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/stiff-penalty-by-annelise-ryan">Stiff Penalty</a>
+<a href="/books/dead-between-the-lines-by-denise-swanson">Dead Between the Lines</a>
 <small class='book-author'>
 by
-<a href="/authors/annelise-ryan">Annelise Ryan</a>
+<a href="/authors/denise-swanson">Denise Swanson</a>
 </small>
 </h5>
-<p class='blurb'>From a <i>USA Today</i> bestselling author: When a high school teacher is killed by a barbecue fork, deputy coroner Mattie Winston is on the case. But with her estranged father back in the picture and her new baby on the way, she’ll have to act fast before the killer claims more victims...</p>
+<p class='blurb'>From a <i>New York Times</i> bestselling author: When Dev hosts a reading group at her five-and-dime store, she finds out bad poetry can lead to murder! “Delightful… Readers will look forward to seeing more of the quick-witted Dev” (<i>Publishers Weekly</i>).</p>
 <p class='prices'>
-<span class='orig-price'>$6.89</span>
+<span class='orig-price'>$7.99</span>
 <span class='disc-price'>$1.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30767?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30767?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30767?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30767?retailer_id=4">Google</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30767?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31532?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31532?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31532?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31532?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31532?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -541,31 +547,31 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Crime Fiction' data-per-region-price='0' data-price='0' data-primary-category='crime-fiction' data-region='us' data-slug='russian-roulette-by-mike-faricy' id='promotion-30768'>
+<div class='book-panel book row' data-category='Crime Fiction' data-per-region-price='0' data-price='0' data-primary-category='crime-fiction' data-region='us' data-slug='the-bone-orchard-by-daniel-judson' id='promotion-30770'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/russian-roulette-by-mike-faricy"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1419876605/russian-roulette-by-mike-faricy.jpg" alt="Russian roulette by mike faricy" /></a>
+<a href="/books/the-bone-orchard-by-daniel-judson"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1410270795/the-bone-orchard-by-daniel-judson.jpg" alt="The bone orchard by daniel judson" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/russian-roulette-by-mike-faricy"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1419876605/russian-roulette-by-mike-faricy.jpg" alt="Russian roulette by mike faricy" /></a>
+<a href="/books/the-bone-orchard-by-daniel-judson"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1410270795/the-bone-orchard-by-daniel-judson.jpg" alt="The bone orchard by daniel judson" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/russian-roulette-by-mike-faricy">Russian Roulette</a>
+<a href="/books/the-bone-orchard-by-daniel-judson">The Bone Orchard</a>
 <small class='book-author'>
 by
-<a href="/authors/mike-faricy">Mike Faricy</a>
+<a href="/authors/daniel-judson">Daniel Judson</a>
 </small>
 </h5>
-<p class='blurb'>The mafia. The FBI. A beautiful woman. It’s all just part of the job for private investigator Dev Haskell, the star of this entertaining and suspenseful mystery. Fans of <i>North by Northwest</i> will devour this whodunit from an author called “the next Carl Hiaasen” (<i>Crime Scene</i>).</p>
+<p class='blurb'>“Packed with intrigue… brilliant” (<i>Publishers Weekly</i>). Part-time private investigator Declan MacManus witnesses a suspicious car accident and finds himself embroiled in a murder conspiracy that rattles the quaint town of Southampton. A sharp mystery from a Shamus Award–winning author.</p>
 <p class='prices'>
-<span class='orig-price'>$2.99</span>
+<span class='orig-price'>$3.99</span>
 <span class='disc-price'>Free!</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30768?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30770?retailer_id=1">Amazon</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -573,31 +579,34 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Thrillers' data-per-region-price='0' data-price='0' data-primary-category='thrillers' data-region='us' data-slug='the-trigger-by-l-j-sellers' id='promotion-30825'>
+<div class='book-panel book row' data-category='Thrillers' data-per-region-price='0' data-price='0' data-primary-category='thrillers' data-region='us' data-slug='murder-on-the-mind-by-l-l-bartlett' id='promotion-30801'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/the-trigger-by-l-j-sellers"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452542997/the-trigger-by-l-j-sellers.jpg" alt="The trigger by l j sellers" /></a>
+<a href="/books/murder-on-the-mind-by-l-l-bartlett"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1376506526/murder-on-the-mind-by-l-l-bartlett.jpg" alt="Murder on the mind by l l bartlett" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/the-trigger-by-l-j-sellers"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452542997/the-trigger-by-l-j-sellers.jpg" alt="The trigger by l j sellers" /></a>
+<a href="/books/murder-on-the-mind-by-l-l-bartlett"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1376506526/murder-on-the-mind-by-l-l-bartlett.jpg" alt="Murder on the mind by l l bartlett" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/the-trigger-by-l-j-sellers">The Trigger</a>
+<a href="/books/murder-on-the-mind-by-l-l-bartlett">Murder on the Mind</a>
 <small class='book-author'>
 by
-<a href="/authors/l-j-sellers">L.J. Sellers</a>
+<a href="/authors/l-l-bartlett">L.L. Bartlett</a>
 </small>
 </h5>
-<p class='blurb'>After a woman and her child vanish, FBI agent Jamie Dallas goes undercover, joining a group of doomsday preppers to investigate the disappearance. But she soon finds herself separated from her contacts… and in way over her head. “Fast-paced and intelligent” (<i>New York Times</i> bestselling author J. Carson Black).</p>
+<p class='blurb'>Recovering from a serious head injury, Jeff Resnick believes he has developed the power to see murders before they occur. Will his attempts to stop a dangerous killer be challenged by others’ disbelief?</p>
 <p class='prices'>
 <span class='orig-price'>$2.99</span>
 <span class='disc-price'>Free!</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30825?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30801?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30801?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30801?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30801?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -605,34 +614,35 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Thrillers' data-per-region-price='99' data-price='99' data-primary-category='thrillers' data-region='us' data-slug='the-body-market-by-d-v-berkom' id='promotion-30488'>
+<div class='book-panel book row' data-category='Thrillers' data-per-region-price='99' data-price='99' data-primary-category='thrillers' data-region='us' data-slug='skeleton-run-by-john-l-deboer' id='promotion-30491'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/the-body-market-by-d-v-berkom"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452013027/the-body-market-by-d-v-berkom.jpg" alt="The body market by d v berkom" /></a>
+<a href="/books/skeleton-run-by-john-l-deboer"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1434817820/skeleton-run-by-john-l-deboer.jpg" alt="Skeleton run by john l deboer" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/the-body-market-by-d-v-berkom"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452013027/the-body-market-by-d-v-berkom.jpg" alt="The body market by d v berkom" /></a>
+<a href="/books/skeleton-run-by-john-l-deboer"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1434817820/skeleton-run-by-john-l-deboer.jpg" alt="Skeleton run by john l deboer" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/the-body-market-by-d-v-berkom">The Body Market</a>
+<a href="/books/skeleton-run-by-john-l-deboer">Skeleton Run</a>
 <small class='book-author'>
 by
-<a href="/authors/d-v-berkom">D.V. Berkom</a>
+<a href="/authors/john-l-deboer">John L. DeBoer</a>
 </small>
 </h5>
-<p class='blurb'>In this riveting work of suspense, retired assassin Leine Basso heads south of the border to find a wealthy couple’s missing daughter. But powerful forces will stop at nothing to keep her from the truth…</p>
+<p class='blurb'>In this engrossing thriller, four teenage friends commit a terrible act — and spend the next 20 years hiding their guilt. But when a blackmailer threatens to reveal their secret, the consequences turn deadly…</p>
 <p class='prices'>
-<span class='orig-price'>$3.99</span>
+<span class='orig-price'>$5.99</span>
 <span class='disc-price'>$0.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30488?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30488?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30488?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30488?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30491?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30491?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30491?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30491?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30491?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -640,31 +650,34 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Action and Adventure' data-per-region-price='199' data-price='199' data-primary-category='action-and-adventure' data-region='us' data-slug='grub-line-rider-by-louis-l-amour' id='promotion-30220'>
+<div class='book-panel book row' data-category='Action and Adventure' data-per-region-price='99' data-price='99' data-primary-category='action-and-adventure' data-region='us' data-slug='the-oracle-code-by-charles-brokaw' id='promotion-30497'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/grub-line-rider-by-louis-l-amour"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1450989866/grub-line-rider-by-louis-l-amour.jpg" alt="Grub line rider by louis l amour" /></a>
+<a href="/books/the-oracle-code-by-charles-brokaw"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1376505043/the-oracle-code-by-charles-brokaw.jpg" alt="The oracle code by charles brokaw" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/grub-line-rider-by-louis-l-amour"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1450989866/grub-line-rider-by-louis-l-amour.jpg" alt="Grub line rider by louis l amour" /></a>
+<a href="/books/the-oracle-code-by-charles-brokaw"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1376505043/the-oracle-code-by-charles-brokaw.jpg" alt="The oracle code by charles brokaw" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/grub-line-rider-by-louis-l-amour">Grub Line Rider</a>
+<a href="/books/the-oracle-code-by-charles-brokaw">The Oracle Code</a>
 <small class='book-author'>
 by
-<a href="/authors/louis-l-amour">Louis L’Amour</a>
+<a href="/authors/charles-brokaw">Charles Brokaw</a>
 </small>
 </h5>
-<p class='blurb'>Take an action-packed ride into the Wild West! Good battles evil and bullets fly in this collection of classic short stories from a bestselling master of frontier fiction.</p>
+<p class='blurb'>From a <i>New York Times</i> bestselling author comes a riveting story of suspense! Thomas, a Harvard archaeology professor, seeks Alexander the Great’s lost tomb — but can he outrace the evil forces that want to claim its hidden power?</p>
 <p class='prices'>
-<span class='orig-price'>$3.99</span>
-<span class='disc-price'>$1.99</span>
+<span class='orig-price'>$2.99</span>
+<span class='disc-price'>$0.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30220?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30497?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30497?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30497?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30497?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -672,31 +685,68 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Contemporary Romance' data-per-region-price='0' data-price='0' data-primary-category='contemporary-romance' data-region='us' data-slug='getting-lucky-by-katie-graykowski' id='promotion-30759'>
+<div class='book-panel book row' data-category='Contemporary Romance' data-per-region-price='0' data-price='0' data-primary-category='contemporary-romance' data-region='us' data-slug='love-garage-by-liz-crowe' id='promotion-31194'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/getting-lucky-by-katie-graykowski"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1397080599/getting-lucky-by-katie-graykowski.jpg" alt="Getting lucky by katie graykowski" /></a>
+<a href="/books/love-garage-by-liz-crowe"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1443034981/love-garage-by-liz-crowe.jpg" alt="Love garage by liz crowe" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/getting-lucky-by-katie-graykowski"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1397080599/getting-lucky-by-katie-graykowski.jpg" alt="Getting lucky by katie graykowski" /></a>
+<a href="/books/love-garage-by-liz-crowe"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1443034981/love-garage-by-liz-crowe.jpg" alt="Love garage by liz crowe" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/getting-lucky-by-katie-graykowski">Getting Lucky</a>
+<a href="/books/love-garage-by-liz-crowe">Love Garage</a>
 <small class='book-author'>
 by
-<a href="/authors/katie-graykowski">Katie Graykowski</a>
+<a href="/authors/liz-crowe">Liz Crowe</a>
 </small>
 </h5>
-<p class='blurb'>Lucky’s husband dies after revealing that he had a secret family. Overcome with grief and confusion, can Lucky open her heart to her brother-in-law Will — and the orphaned daughters of her late husband? A moving romance about the power of forgiveness.</p>
+<p class='blurb'>After their mother falls ill, Aiden comes home to work at his brother Antony’s business. Aiden can’t keep his eyes off single mother Rosalee — but she’s the one woman he can’t have…</p>
+<p class='prices'>
+<span class='orig-price'>$2.99</span>
+<span class='disc-price'>Free!</span>
+</p>
+<p class='avail-through'>Available for a limited time</p>
+<div class='retailer-links retailers'>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31194?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31194?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31194?retailer_id=3">Apple</a>
+</div>
+<p class='categories small'>
+<strong>Category:</strong>
+<a href="/ebook-deals/contemporary-romance-ebooks">Contemporary Romance</a>
+</p>
+</div>
+</div>
+<div class='book-panel book row' data-category='Contemporary Romance' data-per-region-price='0' data-price='0' data-primary-category='contemporary-romance' data-region='us' data-slug='don-t-break-my-heart-by-laurie-kellogg' id='promotion-30769'>
+<div class='col-sm-3 hidden-xs'>
+<div class='book-cover'>
+<a href="/books/don-t-break-my-heart-by-laurie-kellogg"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452479037/don-t-break-my-heart-by-laurie-kellogg.jpg" alt="Don t break my heart by laurie kellogg" /></a>
+</div>
+</div>
+<div class='col-sm-9'>
+<div class='mobile-cover-image visible-xs pull-right'>
+<a href="/books/don-t-break-my-heart-by-laurie-kellogg"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452479037/don-t-break-my-heart-by-laurie-kellogg.jpg" alt="Don t break my heart by laurie kellogg" /></a>
+</div>
+<h5 class='standard book-title'>
+<a href="/books/don-t-break-my-heart-by-laurie-kellogg">Don’t Break My Heart</a>
+<small class='book-author'>
+by
+<a href="/authors/laurie-kellogg">Laurie Kellogg</a>
+</small>
+</h5>
+<p class='blurb'>From an RWA Golden Heart Award–winning author: Justin has recently lost his best friend and become guardian to a teenage girl when he sees his first love Trisha at a wedding. She’s just what his new family needs — but is Justin ready to open his heart?</p>
 <p class='prices'>
 <span class='orig-price'>$3.99</span>
 <span class='disc-price'>Free!</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30759?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30769?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30769?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30769?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30769?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -704,68 +754,71 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Contemporary Romance' data-per-region-price='99' data-price='99' data-primary-category='contemporary-romance' data-region='us' data-slug='the-heat-of-the-moment-by-katie-rose' id='promotion-31365'>
+<div class='book-panel book row' data-category='Contemporary Romance' data-per-region-price='199' data-price='199' data-primary-category='contemporary-romance' data-region='us' data-slug='a-town-called-valentine-by-emma-cane' id='promotion-31369'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/the-heat-of-the-moment-by-katie-rose"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453475289/the-heat-of-the-moment-by-katie-rose.jpg" alt="The heat of the moment by katie rose" /></a>
+<a href="/books/a-town-called-valentine-by-emma-cane"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1426018016/a-town-called-valentine-by-emma-cane.jpg" alt="A town called valentine by emma cane" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/the-heat-of-the-moment-by-katie-rose"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453475289/the-heat-of-the-moment-by-katie-rose.jpg" alt="The heat of the moment by katie rose" /></a>
+<a href="/books/a-town-called-valentine-by-emma-cane"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1426018016/a-town-called-valentine-by-emma-cane.jpg" alt="A town called valentine by emma cane" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/the-heat-of-the-moment-by-katie-rose">The Heat of the Moment</a>
+<a href="/books/a-town-called-valentine-by-emma-cane">A Town Called Valentine</a>
 <small class='book-author'>
 by
-<a href="/authors/katie-rose">Katie Rose</a>
+<a href="/authors/emma-cane">Emma Cane</a>
 </small>
 </h5>
-<p class='blurb'>Physical therapist Jessica has sworn off dating professional athletes — but when she meets gorgeous baseball player Gavin, she can’t resist the temptation...</p>
+<p class='blurb'>Heartbroken Emily moves to the small town of Valentine, Colorado, for a fresh start. Can she make room in her life for rugged rancher Nate? A touching tale of love, family, and unexpected passion.</p>
+<p class='prices'>
+<span class='orig-price'>$4.99</span>
+<span class='disc-price'>$1.99</span>
+</p>
+<p class='avail-through'>Available for a limited time</p>
+<div class='retailer-links retailers'>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31369?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31369?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31369?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31369?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31369?retailer_id=5">Kobo</a>
+</div>
+<p class='categories small'>
+<strong>Category:</strong>
+<a href="/ebook-deals/contemporary-romance-ebooks">Contemporary Romance</a>
+</p>
+</div>
+</div>
+<div class='book-panel book row' data-category='Erotic Romance' data-per-region-price='0' data-price='0' data-primary-category='erotic-romance' data-region='us' data-slug='all-fired-up-by-vivian-arend-and-elle-kennedy' id='promotion-30333'>
+<div class='col-sm-3 hidden-xs'>
+<div class='book-cover'>
+<a href="/books/all-fired-up-by-vivian-arend-and-elle-kennedy"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1447448025/all-fired-up-by-vivian-arend-and-elle-kennedy.jpg" alt="All fired up by vivian arend and elle kennedy" /></a>
+</div>
+</div>
+<div class='col-sm-9'>
+<div class='mobile-cover-image visible-xs pull-right'>
+<a href="/books/all-fired-up-by-vivian-arend-and-elle-kennedy"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1447448025/all-fired-up-by-vivian-arend-and-elle-kennedy.jpg" alt="All fired up by vivian arend and elle kennedy" /></a>
+</div>
+<h5 class='standard book-title'>
+<a href="/books/all-fired-up-by-vivian-arend-and-elle-kennedy">All Fired Up</a>
+<small class='book-author'>
+by
+<a href="/authors/vivian-arend">Vivian Arend</a> and <a href="/authors/elle-kennedy">Elle Kennedy</a>
+</small>
+</h5>
+<p class='blurb'>A former Army Ranger, Parker is now in the business of winning women’s hearts… But gorgeous Lynn pushes his skills to the limit in this sultry read from two <i>New York Times</i> bestselling authors!</p>
 <p class='prices'>
 <span class='orig-price'>$3.99</span>
-<span class='disc-price'>$0.99</span>
+<span class='disc-price'>Free!</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31365?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31365?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31365?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31365?retailer_id=4">Google</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31365?retailer_id=5">Kobo</a>
-</div>
-<p class='categories small'>
-<strong>Category:</strong>
-<a href="/ebook-deals/contemporary-romance-ebooks">Contemporary Romance</a>
-</p>
-</div>
-</div>
-<div class='book-panel book row' data-category='Erotic Romance' data-per-region-price='99' data-price='99' data-primary-category='erotic-romance' data-region='us' data-slug='jax-by-kelly-gendron' id='promotion-30489'>
-<div class='col-sm-3 hidden-xs'>
-<div class='book-cover'>
-<a href="/books/jax-by-kelly-gendron"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452016531/jax-by-kelly-gendron.jpg" alt="Jax by kelly gendron" /></a>
-</div>
-</div>
-<div class='col-sm-9'>
-<div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/jax-by-kelly-gendron"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452016531/jax-by-kelly-gendron.jpg" alt="Jax by kelly gendron" /></a>
-</div>
-<h5 class='standard book-title'>
-<a href="/books/jax-by-kelly-gendron">Jax</a>
-<small class='book-author'>
-by
-<a href="/authors/kelly-gendron">Kelly Gendron</a>
-</small>
-</h5>
-<p class='blurb'>After returning to the bayou, Emmie vows to seduce her old teenage crush, Jax. But Jax has become a bit of a bad boy since the last time she saw him... A tale of white-hot passion that will leave you breathless.</p>
-<p class='prices'>
-<span class='orig-price'>$2.99</span>
-<span class='disc-price'>$0.99</span>
-</p>
-<p class='avail-through'>Available for a limited time</p>
-<div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30489?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30489?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30333?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30333?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30333?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30333?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30333?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -773,66 +826,70 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Historical Romance' data-per-region-price='0' data-price='0' data-primary-category='historical-romance' data-region='us' data-slug='knight-in-highland-armor-by-amy-jarecki' id='promotion-31072'>
+<div class='book-panel book row' data-category='Dark Romance &amp; Erotica' data-per-region-price='99' data-price='99' data-primary-category='dark-erotica' data-region='us' data-slug='capture-me-by-anna-zaires' id='promotion-30330'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/knight-in-highland-armor-by-amy-jarecki"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452969080/knight-in-highland-armor-by-amy-jarecki.jpg" alt="Knight in highland armor by amy jarecki" /></a>
+<a href="/books/capture-me-by-anna-zaires"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1451574267/capture-me-by-anna-zaires.jpg" alt="Capture me by anna zaires" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/knight-in-highland-armor-by-amy-jarecki"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452969080/knight-in-highland-armor-by-amy-jarecki.jpg" alt="Knight in highland armor by amy jarecki" /></a>
+<a href="/books/capture-me-by-anna-zaires"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1451574267/capture-me-by-anna-zaires.jpg" alt="Capture me by anna zaires" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/knight-in-highland-armor-by-amy-jarecki">Knight in Highland Armor</a>
+<a href="/books/capture-me-by-anna-zaires">Capture Me</a>
 <small class='book-author'>
 by
-<a href="/authors/amy-jarecki">Amy Jarecki</a>
+<a href="/authors/anna-zaires">Anna Zaires</a>
 </small>
 </h5>
-<p class='blurb'>Forced into marriage, Margaret finds unexpected passion with Lord Colin, the notorious Black Knight. But when he is summoned to fight a holy war, their dreams face total destruction in this spellbinding medieval romance!</p>
-<p class='prices'>
-<span class='orig-price'>$3.99</span>
-<span class='disc-price'>Free!</span>
-</p>
-<p class='avail-through'>Available for a limited time</p>
-<div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31072?retailer_id=1">Amazon</a>
-</div>
-<p class='categories small'>
-<strong>Category:</strong>
-<a href="/ebook-deals/historical-romance-ebooks">Historical Romance</a>
-</p>
-</div>
-</div>
-<div class='book-panel book row' data-category='Historical Romance' data-per-region-price='99' data-price='99' data-primary-category='historical-romance' data-region='us' data-slug='emma-s-journey-by-callie-hutton' id='promotion-31073'>
-<div class='col-sm-3 hidden-xs'>
-<div class='book-cover'>
-<a href="/books/emma-s-journey-by-callie-hutton"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1451398742/emma-s-journey-by-callie-hutton.jpg" alt="Emma s journey by callie hutton" /></a>
-</div>
-</div>
-<div class='col-sm-9'>
-<div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/emma-s-journey-by-callie-hutton"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1451398742/emma-s-journey-by-callie-hutton.jpg" alt="Emma s journey by callie hutton" /></a>
-</div>
-<h5 class='standard book-title'>
-<a href="/books/emma-s-journey-by-callie-hutton">Emma’s Journey</a>
-<small class='book-author'>
-by
-<a href="/authors/callie-hutton">Callie Hutton</a>
-</small>
-</h5>
-<p class='blurb'>From a <i>USA Today</i> bestselling author: After her husband is killed on the Oregon Trail, Emma becomes wagon scout Davis Cooper’s reluctant bride. Can he help Emma overcome her reservations and convince her to love again?</p>
+<p class='blurb'>From a <i>New York Times</i> bestselling author comes this sexy, thrilling read. After beautiful Yulia spends a night with former soldier Lucas Kent, his plane goes down — and Yulia is partially responsible. But Lucas survives the crash, and he’s determined to make Yulia pay…</p>
 <p class='prices'>
 <span class='orig-price'>$2.99</span>
 <span class='disc-price'>$0.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31073?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31073?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31073?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31073?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30330?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30330?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30330?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30330?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30330?retailer_id=5">Kobo</a>
+</div>
+<p class='categories small'>
+<strong>Category:</strong>
+<a href="/ebook-deals/dark-erotica-ebooks">Dark Romance &amp; Erotica</a>
+</p>
+</div>
+</div>
+<div class='book-panel book row' data-category='Historical Romance' data-per-region-price='0' data-price='0' data-primary-category='historical-romance' data-region='us' data-slug='black-falcon-s-lady-by-kimberly-cates' id='promotion-31076'>
+<div class='col-sm-3 hidden-xs'>
+<div class='book-cover'>
+<a href="/books/black-falcon-s-lady-by-kimberly-cates"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452970902/black-falcon-s-lady-by-kimberly-cates.jpg" alt="Black falcon s lady by kimberly cates" /></a>
+</div>
+</div>
+<div class='col-sm-9'>
+<div class='mobile-cover-image visible-xs pull-right'>
+<a href="/books/black-falcon-s-lady-by-kimberly-cates"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452970902/black-falcon-s-lady-by-kimberly-cates.jpg" alt="Black falcon s lady by kimberly cates" /></a>
+</div>
+<h5 class='standard book-title'>
+<a href="/books/black-falcon-s-lady-by-kimberly-cates">Black Falcon’s Lady</a>
+<small class='book-author'>
+by
+<a href="/authors/kimberly-cates">Kimberly Cates</a>
+</small>
+</h5>
+<p class='blurb'>From “a master of the genre” (<i>Romantic Times</i>) comes a passionate tale of forbidden love! Banished to Ireland, Maryssa is robbed by the Black Falcon — a notorious highwayman who becomes the thief of her heart…</p>
+<p class='prices'>
+<span class='orig-price'>$3.99</span>
+<span class='disc-price'>Free!</span>
+</p>
+<p class='avail-through'>Available for a limited time</p>
+<div class='retailer-links retailers'>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31076?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31076?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31076?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31076?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -840,35 +897,70 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Paranormal Romance' data-per-region-price='0' data-price='0' data-primary-category='paranormal-romance' data-region='us' data-slug='beyond-the-misty-shore-by-vicki-hinze' id='promotion-30316'>
+<div class='book-panel book row' data-category='Historical Romance' data-per-region-price='99' data-price='99' data-primary-category='historical-romance' data-region='us' data-slug='once-a-duchess-by-elizabeth-boyce' id='promotion-31075'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/beyond-the-misty-shore-by-vicki-hinze"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1431735385/beyond-the-misty-shore-by-vicki-hinze.jpg" alt="Beyond the misty shore by vicki hinze" /></a>
+<a href="/books/once-a-duchess-by-elizabeth-boyce"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1430220696/once-a-duchess-by-elizabeth-boyce.jpg" alt="Once a duchess by elizabeth boyce" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/beyond-the-misty-shore-by-vicki-hinze"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1431735385/beyond-the-misty-shore-by-vicki-hinze.jpg" alt="Beyond the misty shore by vicki hinze" /></a>
+<a href="/books/once-a-duchess-by-elizabeth-boyce"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1430220696/once-a-duchess-by-elizabeth-boyce.jpg" alt="Once a duchess by elizabeth boyce" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/beyond-the-misty-shore-by-vicki-hinze">Beyond the Misty Shore</a>
+<a href="/books/once-a-duchess-by-elizabeth-boyce">Once a Duchess</a>
 <small class='book-author'>
 by
-<a href="/authors/vicki-hinze">Vicki Hinze</a>
+<a href="/authors/elizabeth-boyce">Elizabeth Boyce</a>
 </small>
 </h5>
-<p class='blurb'>When Maggie investigates her cousin’s suspicious death, her search leads her to unexpected love with a man haunted by supernatural forces. A “clever fusion of humor, mystery, and romance” (<i>Publishers Weekly</i>).</p>
+<p class='blurb'>Falsely accused of infidelity, Isabelle was divorced by Marshall Lockwood, Duke of Monthwaite, and forced out of society. Now, determined to prove her innocence, Isabelle must confront the duke once more. A breathtaking tale of romance and forgiveness.</p>
 <p class='prices'>
 <span class='orig-price'>$4.99</span>
-<span class='disc-price'>Free!</span>
+<span class='disc-price'>$0.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30316?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30316?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30316?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30316?retailer_id=4">Google</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30316?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31075?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31075?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31075?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31075?retailer_id=4">Google</a>
+</div>
+<p class='categories small'>
+<strong>Category:</strong>
+<a href="/ebook-deals/historical-romance-ebooks">Historical Romance</a>
+</p>
+</div>
+</div>
+<div class='book-panel book row' data-category='Paranormal Romance' data-per-region-price='99' data-price='99' data-primary-category='paranormal-romance' data-region='us' data-slug='nightwalker-by-jacquelyn-frank' id='promotion-31534'>
+<div class='col-sm-3 hidden-xs'>
+<div class='book-cover'>
+<a href="/books/nightwalker-by-jacquelyn-frank"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1435715055/nightwalker-by-jacquelyn-frank.jpg" alt="Nightwalker by jacquelyn frank" /></a>
+</div>
+</div>
+<div class='col-sm-9'>
+<div class='mobile-cover-image visible-xs pull-right'>
+<a href="/books/nightwalker-by-jacquelyn-frank"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1435715055/nightwalker-by-jacquelyn-frank.jpg" alt="Nightwalker by jacquelyn frank" /></a>
+</div>
+<h5 class='standard book-title'>
+<a href="/books/nightwalker-by-jacquelyn-frank">Nightwalker</a>
+<small class='book-author'>
+by
+<a href="/authors/jacqueline-frank">Jacquelyn Frank</a>
+</small>
+</h5>
+<p class='blurb'>From a <i>New York Times</i> bestselling author comes an enthralling supernatural love story. Kamen, a Bodywalker, goes on an urgent quest to save the world — only to discover otherworldly passion with the lovely half-wraith Geneviève…</p>
+<p class='prices'>
+<span class='orig-price'>$4.99</span>
+<span class='disc-price'>$0.99</span>
+</p>
+<p class='avail-through'>Available for a limited time</p>
+<div class='retailer-links retailers'>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31534?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31534?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31534?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/31534?retailer_id=4">Google</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31534?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
@@ -876,109 +968,38 @@ by
 </p>
 </div>
 </div>
-<div class='book-panel book row' data-category='Romantic Suspense' data-per-region-price='99' data-price='99' data-primary-category='romantic-suspense' data-region='us' data-slug='honor-reclaimed-by-tonya-burrows' id='promotion-31413'>
+<div class='book-panel book row' data-category='Romantic Suspense' data-per-region-price='99' data-price='99' data-primary-category='romantic-suspense' data-region='us' data-slug='within-temptation-by-tanya-holmes' id='promotion-30826'>
 <div class='col-sm-3 hidden-xs'>
 <div class='book-cover'>
-<a href="/books/honor-reclaimed-by-tonya-burrows"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453487509/honor-reclaimed-by-tonya-burrows.jpg" alt="Honor reclaimed by tonya burrows" /></a>
+<a href="/books/within-temptation-by-tanya-holmes"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452543168/within-temptation-by-tanya-holmes.jpg" alt="Within temptation by tanya holmes" /></a>
 </div>
 </div>
 <div class='col-sm-9'>
 <div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/honor-reclaimed-by-tonya-burrows"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453487509/honor-reclaimed-by-tonya-burrows.jpg" alt="Honor reclaimed by tonya burrows" /></a>
+<a href="/books/within-temptation-by-tanya-holmes"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1452543168/within-temptation-by-tanya-holmes.jpg" alt="Within temptation by tanya holmes" /></a>
 </div>
 <h5 class='standard book-title'>
-<a href="/books/honor-reclaimed-by-tonya-burrows">Honor Reclaimed</a>
+<a href="/books/within-temptation-by-tanya-holmes">Within Temptation</a>
 <small class='book-author'>
 by
-<a href="/authors/tonya-burrows">Tonya Burrows</a>
+<a href="/authors/tanya-holmes">Tanya Holmes</a>
 </small>
 </h5>
-<p class='blurb'>When Marine veteran Seth teams up with photojournalist Phoebe on a dangerous rescue mission, she stirs up desires he never thought he’d have again. But will Phoebe’s secret tear them apart?</p>
+<p class='blurb'>It’s been over a decade since her mother’s murder, and Shannon is afraid the wrong man has been convicted. With the help of Trace, the man she sent to jail, she’ll set out on a dangerous search for the truth — and end up finding a world of temptation.</p>
 <p class='prices'>
-<span class='orig-price'>$5.99</span>
+<span class='orig-price'>$2.99</span>
 <span class='disc-price'>$0.99</span>
 </p>
 <p class='avail-through'>Available for a limited time</p>
 <div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31413?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31413?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31413?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31413?retailer_id=5">Kobo</a>
+<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30826?retailer_id=1">Amazon</a>
+<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30826?retailer_id=2">B &amp; N</a>
+<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30826?retailer_id=3">Apple</a>
+<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30826?retailer_id=5">Kobo</a>
 </div>
 <p class='categories small'>
 <strong>Category:</strong>
 <a href="/ebook-deals/romantic-suspense-ebooks">Romantic Suspense</a>
-</p>
-</div>
-</div>
-<div class='book-panel book row' data-category='New Adult Romance' data-per-region-price='0' data-price='0' data-primary-category='new-adult-romance' data-region='us' data-slug='something-great-by-m-clarke' id='promotion-30607'>
-<div class='col-sm-3 hidden-xs'>
-<div class='book-cover'>
-<a href="/books/something-great-by-m-clarke"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1417631207/something-great-by-m-clarke.jpg" alt="Something great by m clarke" /></a>
-</div>
-</div>
-<div class='col-sm-9'>
-<div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/something-great-by-m-clarke"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1417631207/something-great-by-m-clarke.jpg" alt="Something great by m clarke" /></a>
-</div>
-<h5 class='standard book-title'>
-<a href="/books/something-great-by-m-clarke">Something Great</a>
-<small class='book-author'>
-by
-<a href="/authors/m-clarke">M. Clarke</a>
-</small>
-</h5>
-<p class='blurb'>An all-consuming romance with over 1,500 five-star ratings on Goodreads: Recent graduate Jeanella is determined to stay away from her boss’s charming son Maxwell. But he’s made it his mission to change her mind...</p>
-<p class='prices'>
-<span class='orig-price'>$3.99</span>
-<span class='disc-price'>Free!</span>
-</p>
-<p class='avail-through'>Available for a limited time</p>
-<div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/30607?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/30607?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/30607?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Google Play" href="https://r.bookbub.com/promotion_site_active_check/30607?retailer_id=4">Google</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/30607?retailer_id=5">Kobo</a>
-</div>
-<p class='categories small'>
-<strong>Category:</strong>
-<a href="/ebook-deals/new-adult-romance-ebooks">New Adult Romance</a>
-</p>
-</div>
-</div>
-<div class='book-panel book row' data-category='New Adult Romance' data-per-region-price='99' data-price='99' data-primary-category='new-adult-romance' data-region='us' data-slug='resisting-her-by-kendall-ryan-2016-01-20' id='promotion-31180'>
-<div class='col-sm-3 hidden-xs'>
-<div class='book-cover'>
-<a href="/books/resisting-her-by-kendall-ryan-2016-01-20"><img class="img-responsive cover-image" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453299605/resisting-her-by-kendall-ryan-2016-01-20.jpg" alt="Resisting her by kendall ryan 2016 01 20" /></a>
-</div>
-</div>
-<div class='col-sm-9'>
-<div class='mobile-cover-image visible-xs pull-right'>
-<a href="/books/resisting-her-by-kendall-ryan-2016-01-20"><img class="img-responsive cover-image-mobile" src="https://res.cloudinary.com/bookbub/image/upload/c_fit,f_auto,h_500,q_85,w_500/v1453299605/resisting-her-by-kendall-ryan-2016-01-20.jpg" alt="Resisting her by kendall ryan 2016 01 20" /></a>
-</div>
-<h5 class='standard book-title'>
-<a href="/books/resisting-her-by-kendall-ryan-2016-01-20">Resisting Her</a>
-<small class='book-author'>
-by
-<a href="/authors/kendall-ryan">Kendall Ryan</a>
-</small>
-</h5>
-<p class='blurb'>A sultry romance from a <i>New York Times</i> bestselling author: FBI agent Cole Fletcher lives for his work, until he rescues Savannah from a nightmarish cult. As she tries to overcome her trauma, the two find an attraction that’s hard to resist...</p>
-<p class='prices'>
-<span class='orig-price'>$3.99</span>
-<span class='disc-price'>$0.99</span>
-</p>
-<p class='avail-through'>Available for a limited time</p>
-<div class='retailer-links retailers'>
-<a class="btn btn-primary btn-xs " data-retailer="Amazon Kindle" href="https://r.bookbub.com/promotion_site_active_check/31180?retailer_id=1">Amazon</a>
-<a class="btn btn-primary btn-xs " data-retailer="Barnes &amp; Noble Nook" href="https://r.bookbub.com/promotion_site_active_check/31180?retailer_id=2">B &amp; N</a>
-<a class="btn btn-primary btn-xs " data-retailer="Apple iBooks" href="https://r.bookbub.com/promotion_site_active_check/31180?retailer_id=3">Apple</a>
-<a class="btn btn-primary btn-xs " data-retailer="Kobo" href="https://r.bookbub.com/promotion_site_active_check/31180?retailer_id=5">Kobo</a>
-</div>
-<p class='categories small'>
-<strong>Category:</strong>
-<a href="/ebook-deals/new-adult-romance-ebooks">New Adult Romance</a>
 </p>
 </div>
 </div>
@@ -1105,7 +1126,7 @@ by
 Never miss a deal!
 </h2>
 <p>Join BookBub to get alerts about free and bargain books in your inbox.</p>
-<form class="subscribe-form form-borderless" role="form" id="new_user" action="/user_signups" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="d8pgR0VEzgFCEDK4CELrgZp7KMilTzjQI2xjk3L8uLq4AR1jSC0CenxBJhGJFpIwwFN9OfupOTm6sGJtyhBi0Q==" /><input type="hidden" name="send_home" id="send_home" value="true" />
+<form class="subscribe-form form-borderless" role="form" id="new_user" action="/user_signups" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="9iMvJyGe6LX7dT4iVwbRny+/Gg5GrAtSF2V+2nr3lR59PgvT9yCGIIJTSZI5CTq9gKlP2qOHmUywvg9Vt1UGSQ==" /><input type="hidden" name="send_home" id="send_home" value="true" />
 <input type="hidden" name="from" id="from" value="browse_overlay" />
 <div class="form-group"><label class="sr-only control-label" for="user_email_address">Email address</label><input placeholder="Enter Your Email Address..." class="form-control input-lg user-email-field" type="email" name="user[email_address]" id="user_email_address" /></div>
 <input type="submit" name="commit" value="Start Reading - It&#39;s Free" class="btn btn-primary btn-lg subscribe-submit" id="overlay-subscribe-submit" />
@@ -1134,6 +1155,7 @@ Never miss a deal!
 </div>
 
 </body>
+
 
 <template name="scraper">
  <h2> Featured Titles: </h2>
