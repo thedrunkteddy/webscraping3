@@ -45,19 +45,21 @@ if (Meteor.isClient) {
         Meteor.methods({
 
           webScrape: function (){
-            result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
+            var result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
             $ = cheerio.load(result.content);
-            var bookPanels = $('div.book-panel').toArray()
-            for(i=0; i<bookPanels.length(); i++){
-              $ = cheerio.load(bookPanels[i])
+            var bookPanels = $('div.book-panel')
+            console.log(bookPanels)
+            _.each(bookPanels, function(book) { 
+              $ = cheerio.load(book)
               var title= $('h5.standard').text()
-              var url= $('a[href$="1"]').toString()
+              var url= $('a[href$="1"]').attr('href')
+              console.log(url)
               var result2 = Meteor.http.get(url);
-              $1 = cheerio.load(result2.content);
-              var rating = $1('#avgRating > span > a > span').text();
-              console.log(title)
-              Books.insert({Panel: bookPanels[i], Title: title, url: url, Rating: rating})
-              }
+              $$ = cheerio.load(result2.content);
+              var rating = $$('#avgRating > span > a > span').text();
+              console.log(rating)
+              Books.insert({panel: $.html(), title: title, url: url, rating: rating})
+            })
             return true;
             }
 
