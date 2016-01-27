@@ -1,4 +1,4 @@
-Books = new Mongo.Collection()
+Books = new Mongo.Collection("books");
 
 if (Meteor.isClient) {
 
@@ -47,29 +47,20 @@ if (Meteor.isClient) {
           webScrape: function (){
             result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
             $ = cheerio.load(result.content);
-            var titles = [];
-            var count = 0;
-            for(i=30000; i<33000; i++){
-              var resp= $('#promotion-' + i + '> div.col-sm-9 > h5 > a').text();
-
-              if (resp != "" ){
-                var url= "https://r.bookbub.com/promotion_site_active_check/" + i + "?retailer_id=1"
-                var result2 = Meteor.http.get(url);
-                $1 = cheerio.load(result2.content);
-                var resp2 = $1('#avgRating > span > a > span').text();
-                console.log(resp2)
-
-
-                titles[count] = resp + resp2
-                count = count + 1;
-                Books.insert({Title: resp, url: url})
+            var bookPanels = $('div.book-panel').toArray()
+            for(i=0; i<bookPanels.length(); i++){
+              $ = cheerio.load(bookPanels[i])
+              var title= $('h5.standard').text()
+              var url= $('a[href$="1"]').toString()
+              var result2 = Meteor.http.get(url);
+              $1 = cheerio.load(result2.content);
+              var rating = $1('#avgRating > span > a > span').text();
+              console.log(title)
+              Books.insert({Panel: bookPanels[i], Title: title, url: url, Rating: rating})
               }
+            return true;
             }
-            var newline = titles.join("\n");
-            return newline;
 
-          }
-
-    })
-  });
+        });
+    });
 }
