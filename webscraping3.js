@@ -1,7 +1,7 @@
 Books = new Mongo.Collection("books");
 
 if (Meteor.isClient) {
-
+  Meteor.subscribe("books")
   Meteor.call('webScrape', function(error,result){
     if(error){
       console.log("error", error);
@@ -29,8 +29,11 @@ if (Meteor.isClient) {
     scrapeIsNotFinished: function(){
       return !Session.get("scraper");
     }
-  })
+  });
 
+  Template.registerHelper( 'books', function() {
+    return Books.find()
+});
   Meteor.Spinner.options={
     className:'spinner',
     top: 'auto',
@@ -45,11 +48,11 @@ if (Meteor.isClient) {
         Meteor.methods({
 
           webScrape: function (){
-            var result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
+            var result = Meteor.http.get("https://www.bookbub.com/ebook-deals/middle-grade-ebooks");
             $ = cheerio.load(result.content);
             var bookPanels = $('div.book-panel')
             console.log(bookPanels)
-            _.each(bookPanels, function(book) { 
+            _.each(bookPanels, function(book) {
               $ = cheerio.load(book)
               var title= $('h5.standard').text()
               var url= $('a[href$="1"]').attr('href')
