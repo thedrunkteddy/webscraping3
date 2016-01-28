@@ -1,7 +1,8 @@
-Books = new Mongo.Collection()
+Books = new Mongo.Collection("books");
 
 if (Meteor.isClient) {
 
+  Meteor.subscribe("books")
   Meteor.call('webScrape', function(error,result){
     if(error){
       console.log("error", error);
@@ -29,8 +30,13 @@ if (Meteor.isClient) {
     scrapeIsNotFinished: function(){
       return !Session.get("scraper");
     }
-  })
+  });
 
+  Template.registerHelper( 'books', function() {
+    return Books.find()
+  }
+
+);
   Meteor.Spinner.options={
     className:'spinner',
     top: 'auto',
@@ -43,33 +49,26 @@ if (Meteor.isClient) {
         var cheerio = Meteor.npmRequire('cheerio');
 
         Meteor.methods({
-
           webScrape: function (){
-            result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
+            if(Books.find().fetch().length != 0)
+              Books.remove({})
+            var result = Meteor.http.get("https://www.bookbub.com/ebook-deals/latest");
             $ = cheerio.load(result.content);
-            var titles = [];
-            var count = 0;
-            for(i=30000; i<33000; i++){
-              var resp= $('#promotion-' + i + '> div.col-sm-9 > h5 > a').text();
-
-              if (resp != "" ){
-                var url= "https://r.bookbub.com/promotion_site_active_check/" + i + "?retailer_id=1"
-                var result2 = Meteor.http.get(url);
-                $1 = cheerio.load(result2.content);
-                var resp2 = $1('#avgRating > span > a > span').text();
-                console.log(resp2)
-
-
-                titles[count] = resp + resp2
-                count = count + 1;
-                Books.insert({Title: resp, url: url})
-              }
+            var bookPanels = $('div.book-panel')
+            console.log(bookPanels)
+            _.each(bookPanels, function(book) {
+              $ = cheerio.load(book)
+              var title= $('h5.standard').text()
+              var url= $('a[href$="1"]').attr('href')
+              console.log(url)
+              var result2 = Meteor.http.get(url);
+              $$ = cheerio.load(result2.content);
+              var rating = $$('#avgRating > span > a > span').text();
+              console.log(rating)
+              Books.insert({panel: $.html(), title: title, url: url, rating: rating})
+            })
             }
-            var newline = titles.join("\n");
-            return newline;
 
-          }
-
-    })
-  });
+        });
+    });
 }
